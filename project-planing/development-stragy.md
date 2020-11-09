@@ -1,12 +1,12 @@
 # Development Strategy
 
-> `week-4`
+> `Chat-Forum`
 
 will be filled later
 
 ## WIREFRAME
 
-![wireframe]()
+<img src="chat-sign.png" alt="sign in"  width="400"/> <img src="chat-main.png" alt="sign in" width="400"/>
 
 ---
 
