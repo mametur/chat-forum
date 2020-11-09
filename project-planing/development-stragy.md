@@ -6,7 +6,7 @@ will be filled later
 
 ## WIREFRAME
 
-<img src="chat-sign.png" alt="sign in"  width="400"/> <img src="chat-main.png" alt="sign in" width="400"/>
+<img src="chat-sign.png" alt="sign in"  width="400"/> <img src="chat-main-1.png" alt="sign in" width="400"/>
 
 ---
 
