@@ -6,8 +6,25 @@ A collection of user stories you can choose from. Stories inside of each priorit
 
 > these are necessary for basic usability
 
-- [ ] As a site visitor, I want to see all courses list on the terminal so that I can examine the all courses list ...
-  - _When user pass courses path as url afterwards it will show all list of courses_
+- [ ] As a site visitor, I want to make an account so that I can sign-in chat-forum.
+
+  - _via sign-up button make an account_
+
+- [ ] As a site visitor, I want to join chat-forum so that I can leave or read comments.
+
+  - _if user has a account with sign-in button_
+
+- [ ] As a site visitor, I want to leave comments so that people can read my opinion.
+
+  - _via submit of submit icon button leave a comment_
+
+- [ ] As a site visitor, I want to delete my comment.
+
+  - _via click on user avatar then select delete option_
+
+- [ ] As a site visitor, I want to update my comment.
+
+  - _via click on user avatar then select edit option_
 
 ## Should-Haves
 
