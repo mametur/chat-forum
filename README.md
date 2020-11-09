@@ -1,6 +1,6 @@
 [![Contributors][contributors-shield]][contributors-url] [![PR][pr-shield]][pr-url] [![Issues][issues-shield]][issues-url] [![Forks][forks-shield]][forks-url] [![MIT License][license-shield]][license-url]
 
-  <h3 align="center">Project: Courses-Web-App</h3>
+  <h3 align="center">Project: Chat-Forum</h3>
 
   <p align="center">
     Let's start to explore the project 🚀 
@@ -26,7 +26,7 @@
 
 ## About The Project
 
-Will be filled later
+This project aims to learn and improve RESTful API skills. This project has two pages. On the first page, the user can log in or register. On the second page, if a user can successfully log into the website, this user can leave comments and read. Uniqe user can only change his or her comment.
 
 ### Built With
 
