@@ -10,7 +10,7 @@ const DATA_PATH = path.join(__dirname, '/..', config.DATA_DIR, '/_-data.json');
 
 const controllers = {
   hello: (req, res) => {
-    res.json({ message: 'hello!' });
+    res.json({ message: '___' });
   },
 
 };
