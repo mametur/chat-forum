@@ -113,29 +113,3 @@ function renderComments(data, userName) {
 		return comments;
 	}
 }
-
-/*
- <li class="you">
-        <div class="entete">
-          <span class="status green"></span>
-          <h2 id='user1name'>gelila</h2>
-          <h3 id= "user1nowtime">10:12AM, Today</h3>
-        </div>
-        <div class="triangle"></div>
-        <div class="message" id="user1comment">
-        Hey guys look!.
-        </div>
-      </li>
-      <li class="me">
-        <div class="entete" id="user2">
-          <h3 id="user2nowtime">10:12AM, Today</h3>
-          <h2 id="user2name">user2</h2>
-          <span class="status blue"></span>
-        </div>
-        <div class="triangle"></div>
-        <div class="message" id="user2comment">
-          what?
-        </div>
-      </li>
-
-*/
