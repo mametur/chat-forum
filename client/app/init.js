@@ -1,9 +1,7 @@
-fetch('/api')
-  .then(res => res.json())
-  .then(data => {
-    console.log(data)
-    document.getElementById('root')
-      .innerHTML = data.message;
-  })
-  .catch(err => console.error(err));
+
+import { register } from '../register.js';
+import { setimage } from '../register.js';
+
+document.getElementById('my-select').addEventListener('onchange',setimage)
+document.getElementById('signup').addEventListener('click',register);
 

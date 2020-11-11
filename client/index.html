@@ -5,13 +5,15 @@
   <meta charset="utf-8" />
   <title>courses web-app</title>
   
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-  <img src="img/icon.png" alt="icon" class="img-icon">
+  <img src="img/icon.png" alt="icon2" class="img-icon">
 <div class="login-wrap" style="display:block;">
   <div class="log">
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -48,39 +50,96 @@
           
         </div>
         <div class="group">
-          <input id="check2" type="checkbox" class="check" value="checkpassword">
-          <label for="check2"><span class="icon"></span> show Password</label>
-         
-        </div>
-       
+          <div class="form-group">
+            <select class="form-control" id="my-select">
+              <option class="label">Select Avatar Number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+          <div class="img-container" id="va">
+        <input class="avatar-img img4" id="av1">
         
-        <div class="group">
-          <label for="Avatar" class="label">Select Avatar</label>
-         <div class="img-container">
-        <button class="avatar-img img4" id="av1"></button>
-        <button class="avatar-img img5"id="av2"></button>
-        <button class="avatar-img img6 "id="av3"></button>
-        <br>
-          <button class="avatar-img img1"id="av4"></button>
-          <button class="avatar-img img2"id="av5"></button>
-          <button class="avatar-img img3"id="av6"></button>
          </div>
         </div>
        
         <div class="group">
-          <input type="submit" class="button" value="Sign Up">
+          <input  id="signup" class="button" type="submit" value="Sign Up">
         </div>
         <div class="hr"></div>
-       
       </div>
     </div>
   </div>
 </div>
+<div id='root'style="display:none;"><div id="container">
+  <aside>
+    <header>
+      <input type="text" placeholder="search">
+    </header>
+    <ul>
+      <li>
+        <img src="/img/6.png" id='userimage1' alt="">
+        <div>
+          <h2 id="name">gelila</h2>
+        </div>
+      </li>
+      <li>
+        <img src="/img/2.png" id='userimage1' alt="">
+        <div>
+          <h2 id="name">gelila</h2>
+        </div>
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <header>
+    <img src="/img/6.png" id='userimage' alt="">
+    </header>
+    <ul id="chat">
+      <li class="you">
+        <div class="entete">
+          <span class="status green"></span>
+          <h2 id='user1name'>gelila</h2>
+          <h3 id= "user1nowtime">10:12AM, Today</h3>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user1comment">
+        Hey guys look!.
+        </div>
+      </li>
+      <li class="me">
+        <div class="entete" id="user2">
+          <h3 id="user2nowtime">10:12AM, Today</h3>
+          <h2 id="user2name">user2</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user2comment">
+          what?
+        </div>
+      </li>
+     
+    </ul>
+    <footer>
+      <textarea placeholder="Type your message"></textarea>
+      
+      <a href="#">Send</a>
+    </footer>
+  </main>
+</div></div>
 
-
-  <div id='root'></div>
-
-  <script src='./app/init.js'></script>
+  
 </body>
+<script type="module" src="./app/init.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
