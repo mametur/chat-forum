@@ -60,7 +60,24 @@ console.log(err);
       }
   }
  },
- 
+ readAll: async (req, res) => {
+    try {
+      const usersData = await readFile(DATA_PATH, 'utf-8');
+      const userdata = JSON.parse(usersData);
+
+      res.json(userdata.users);
+
+    } catch (err) {
+      console.log(err)
+
+      if (err && err.code === 'ENOENT') {
+        res.status(404).end();
+        return;
+      }
+
+
+    }
+  },
 };
 
 module.exports = controllers;
