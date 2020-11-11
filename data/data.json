@@ -5,50 +5,41 @@
    "password": "Azad123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png"
+   "avatar": "3.png"
   },
   {
    "name": "Alex",
    "password": "Alex123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png"
+   "avatar": "4.png"
   },
   {
    "name": "Gelila",
    "password": "Gelila123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png"
+   "avatar": "6.png"
   },
   {
    "name": "Eltayeb",
    "password": "Eltayeb123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png"
+   "avatar": "2.png"
   },
   {
    "name": "Miroslav",
    "password": "Miroslav123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png"
-  },
-  {
-   "name": "Mame",
-   "password": "Mame123",
-   "avatar": "4.png",
-   "active": false,
-   "ID": false
+   "avatar": "2.png"
   }
  ],
  "comments": [
   {
    "name": "Azad",
-   "comment": [
-    "I want to change our meeting time due to Coronavirus"
-   ],
+   "comment":"I want to change our meeting time due to Coronavirus",
    "date": "09/11/2020"
   }
  ]

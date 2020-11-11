@@ -6,6 +6,7 @@ export const signIn = (event) => {
 	const login_page = document.getElementById('login-wrap');
 	const chat_forum = document.getElementById('root');
 	const avatar_list = document.getElementById('users-list');
+	const chat_box = document.getElementById('chat');
 
 	// throw error for empty input
 	if (isEmpty(username, password)) {
@@ -21,7 +22,8 @@ export const signIn = (event) => {
 		if (!activeUser) {
 			alert(`${username.toUpperCase()}, Please sign-up, you have not any account yet`);
 		} else {
-			// render chat-forum
+			/* render chat-forum*/
+			// render avatars
 			login_page.style.display = 'none';
 			chat_forum.style.display = 'block';
 
@@ -29,6 +31,13 @@ export const signIn = (event) => {
 				const div = document.createElement('div');
 				div.innerHTML = renderAvatars(data.users);
 				avatar_list.appendChild(div);
+			}
+
+			// render comments
+			if (renderComments(data.comments, username)) {
+				const divChat = document.createElement('div');
+				divChat.innerHTML = renderComments(data.comments, username);
+				chat_box.appendChild(divChat);
 			}
 		}
 	});
@@ -81,3 +90,52 @@ function renderAvatars(data) {
 		return userLists;
 	}
 }
+
+// generate comments
+
+function renderComments(data, userName) {
+	let comments = '';
+	if (data) {
+		data.forEach((element) => {
+			comments += `<li class="${userName === element.name ? 'me' : 'you'}">
+        <div class="entete">
+          <span class="status green"></span>
+          <h2 id='${element.name}Comment' class="text-danger">${element.name}</h2>
+          <h3 id= "user1nowtime">${element.date}</h3>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user1comment">
+       ${element.comment}
+        </div>
+      </li>`;
+		});
+
+		return comments;
+	}
+}
+
+/*
+ <li class="you">
+        <div class="entete">
+          <span class="status green"></span>
+          <h2 id='user1name'>gelila</h2>
+          <h3 id= "user1nowtime">10:12AM, Today</h3>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user1comment">
+        Hey guys look!.
+        </div>
+      </li>
+      <li class="me">
+        <div class="entete" id="user2">
+          <h3 id="user2nowtime">10:12AM, Today</h3>
+          <h2 id="user2name">user2</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user2comment">
+          what?
+        </div>
+      </li>
+
+*/
