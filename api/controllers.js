@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const session = require('express-session');
 const util = require('util');
@@ -7,60 +7,70 @@ const path = require('path');
 const tv4 = require('tv4');
 const config = require('../config');
 
-
-const readFile = util.promisify(fs.readFile)
-const writeFile = util.promisify(fs.writeFile)
+const readFile = util.promisify(fs.readFile);
+const writeFile = util.promisify(fs.writeFile);
 
 const SCHEMA = path.join(__dirname, '/..', config.DATA_DIR, '/_-schema.json');
 const DATA_PATH = path.join(__dirname, '..', 'data', 'data.json');
 
 const controllers = {
-  hello: (req, res) => {
-    res.json(data);
-  },
- signUp: async (req,res)=>{
-  const newUser = req.body
-  
-  
-  try{
-    const readData = await readFile(DATA_PATH,'utf-8')
-    const parseRead = JSON.parse(readData);
- 
-     newUser.id = parseRead.nextID;
-      parseRead.nextID++;
+	hello: (req, res) => {
+		res.json(data);
+	},
+	readAll: async (req, res) => {
+		const newUser = req.body;
 
-      const isValid = tv4.validate(newUser, SCHEMA)
+		try {
+			const readData = await readFile(DATA_PATH, 'utf-8');
+			const parseRead = JSON.parse(readData);
 
-      if (!isValid) {
-        const error = tv4.error
-        console.error(error)
+			const isValid = tv4.validate(newUser, SCHEMA);
 
-        res.status(400).json({
-          error: {
-            message: error.message,
-            dataPath: error.dataPath
-          }
-        })
-        return
-      }
-      
-     parseRead.users.push(newUser) 
-    
-     const newUserData= JSON.stringify(parseRead,null,' ');
-     await writeFile(DATA_PATH,newUserData);
-     console.log(newUser)
-     res.json(newUser);
+			if (!isValid) {
+				const error = tv4.error;
+				console.error(error);
 
-  }catch{
-console.log(err);
+				res.status(400).json({
+					error: {
+						message: error.message,
+						dataPath: error.dataPath,
+					},
+				});
+				return;
+			}
 
-      if (err && err.code === 'ENOENT') {
-        res.status(404).end();
-        return;
-      }
-  }
- },
- 
+			res.json(parseRead);
+		} catch {
+			console.log(err);
+
+			if (err && err.code === 'ENOENT') {
+				res.status(404).end();
+				return;
+			}
+		}
+	},
+	signUp: async (req, res) => {
+		const newUser = req.body;
+
+		try {
+			const readData = await readFile(DATA_PATH, 'utf-8');
+			const parseRead = JSON.parse(readData);
+
+			parseRead.users.push(newUser);
+
+			const newUserData = JSON.stringify(parseRead, null, ' ');
+			await writeFile(DATA_PATH, newUserData);
+			console.log(newUser);
+			res.json(parseRead);
+		} catch {
+			console.log(err);
+
+			if (err && err.code === 'ENOENT') {
+				res.status(404).end();
+				return;
+			}
+		}
+	},
 };
 
 module.exports = controllers;

@@ -1,47 +1,45 @@
 {
- "nextID": 12,
  "users": [
   {
    "name": "Azad",
    "password": "Azad123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png",
-   "id": 1
+   "avatar": "mame-azad.png"
   },
   {
    "name": "Alex",
    "password": "Alex123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png",
-   "id": 2
+   "avatar": "mame-azad.png"
   },
   {
    "name": "Gelila",
    "password": "Gelila123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png",
-   "id": 3
+   "avatar": "mame-azad.png"
   },
   {
    "name": "Eltayeb",
    "password": "Eltayeb123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png",
-   "id": 4
+   "avatar": "mame-azad.png"
   },
   {
    "name": "Miroslav",
    "password": "Miroslav123",
    "comments": [],
    "active": false,
-   "avatar": "mame-azad.png",
-   "id": 5
+   "avatar": "mame-azad.png"
+  },
+  {
+   "name": "Yupii",
+   "password": "ssss",
+   "avatar": "1.png"
   }
-  
  ],
  "comments": [
   {
