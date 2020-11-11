@@ -11,6 +11,13 @@ export const signIn = (event) => {
 
 	getUserInfo().then((data) => {
 		console.log(data);
+		// check user in database
+		const activeUser = isUserExistInData(data.users, username, password);
+		console.log('active user', activeUser);
+		// if user not exist in the database
+		if (!activeUser) {
+			alert(`${username.toUpperCase()}, Please sign-up, you have not any account yet`);
+		}
 	});
 };
 //Fetch get Method
@@ -36,4 +43,11 @@ function isEmpty(name, password) {
 		alert('Please pass your info');
 		return true;
 	}
+}
+
+// check user name and password
+function isUserExistInData(data, name, password) {
+	return data.find((userName) => {
+		return userName.name === name && userName.password === password;
+	});
 }
