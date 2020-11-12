@@ -8,5 +8,6 @@ router.get('/', controllers.hello);
 // write your routes
 router.get('/users', controllers.readAll);
 router.post('/users', controllers.signUp);
+router.post('/comments', controllers.leaveComments);
 
 module.exports = router;

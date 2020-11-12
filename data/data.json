@@ -34,13 +34,23 @@
    "comments": [],
    "active": false,
    "avatar": "2.png"
+  },
+  {
+   "name": "Azad",
+   "comment": "Prototypal inheritance",
+   "date": "12/11/2020"
   }
  ],
  "comments": [
   {
    "name": "Azad",
-   "comment":"Functional programming",
+   "comment": "Functional programming",
    "date": "09/11/2020"
+  },
+  {
+   "name": "Azad",
+   "comment": "Prototypal inheritance",
+   "date": "12/11/2020"
   }
  ]
 }
