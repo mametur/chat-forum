@@ -7,14 +7,16 @@
   
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+<script src="https://kit.fontawesome.com/8faacb2a17.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
   <img src="img/icon.png" alt="icon2" class="img-icon">
+
 <div class="login-wrap" style="display:block;" id="login-wrap">
+
   <div class="log">
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
@@ -35,7 +37,9 @@
           <label for="check1"><span class="icon"></span> Keep me Signed in</label>
         </div>
         <div class="group">
+
           <input id="sign-in-button" type="submit" class="button" value="Sign In">
+
         </div>
         <div class="hr"></div>
       </div>
@@ -75,13 +79,29 @@
     </div>
   </div>
 </div>
+
 <div id='root' style="display:none;"><div id="container">
+
   <aside>
     <header>
       <input type="text" placeholder="search">
     </header>
+
     <ul id="users-list">
      
+    <ul>
+      <li>
+        <img src="/img/6.png" id='userimage1' alt="">
+        <div>
+          <h2 id="name">gelila</h2>
+        </div>
+      </li>
+      <li>
+        <img src="/img/2.png" id='userimage1' alt="">
+        <div>
+          <h2 id="name">user2</h2>
+        </div>
+      </li>
     </ul>
   </aside>
   <main>
@@ -89,6 +109,38 @@
     <h2 class="text-primary">Can you name two programming paradigms important for JavaScript app developers?</h2>>
     </header>
     <ul id="chat">
+
+      <li class="you">
+        <div class="entete">
+          <span class="status green"></span>
+          <h2 id='user1name'>gelila</h2>
+          <h3 id= "user1nowtime">10:12AM, Today</h3>
+         
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user1comment">
+         Hey guys look!
+        <button class="btns" id="delete"><i class="far fa-trash-alt"></i></button>
+          <button class="btns" id='edit'><i class="fas fa-edit"></i></button>
+        </div>
+        
+      </li>
+      <li class="me">
+        <div class="entete" id="user2">
+          <h3 id="user2nowtime">10:12AM, Today</h3>
+          <h2 id="user2name">user2</h2>
+          <span class="status blue"></span>
+        </div>
+        <div class="triangle"></div>
+        <div class="message" id="user2comment">
+          what?
+          <button class="btns" id="delete"><i class="far fa-trash-alt" style="background:inherit"></i></button>
+          <button class="btns" id='edit'><i class="fas fa-edit"></i></button>
+        </div>
+        
+      </li>
+     
+
     </ul>
     <footer>
       <textarea placeholder="Type your message"></textarea>
