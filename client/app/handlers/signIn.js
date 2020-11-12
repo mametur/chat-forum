@@ -106,7 +106,11 @@ function renderComments(data, userName) {
         <div class="triangle"></div>
         <div class="message" id="user1comment">
        ${element.comment}
-        </div>
+		</div>
+		<div>
+		<button class="btns"><i class="far fa-trash-alt"></i></button>
+		<button class="btns" ><i class="fas fa-edit"></i></button>
+	  </div>
       </li>`;
 		});
 
