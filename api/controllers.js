@@ -61,13 +61,31 @@ const controllers = {
 			await writeFile(DATA_PATH, newUserData);
 			console.log(newUser);
 			res.json(parseRead);
-		} catch {
+		} catch (err) {
 			console.log(err);
 
 			if (err && err.code === 'ENOENT') {
 				res.status(404).end();
 				return;
 			}
+		}
+	},
+
+	leaveComments: async (req, res, next) => {
+		const newComment = req.body;
+
+		try {
+			const readData = await readFile(DATA_PATH, 'utf-8');
+			const parseRead = JSON.parse(readData);
+
+			parseRead.comments.push(newComment);
+
+			const storeNewComment = JSON.stringify(parseRead, null, ' ');
+			await writeFile(DATA_PATH, storeNewComment);
+			console.log(storeNewComment);
+			res.json(parseRead);
+		} catch (error) {
+			next(error);
 		}
 	},
 };
