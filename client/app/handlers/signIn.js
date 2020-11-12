@@ -1,4 +1,5 @@
 'use strict';
+export let IamOnline = false;
 
 export const signIn = (event) => {
 	const username = document.getElementById('user1').value;
@@ -26,6 +27,8 @@ export const signIn = (event) => {
 			// render avatars
 			login_page.style.display = 'none';
 			chat_forum.style.display = 'block';
+
+			IamOnline = activeUser; // this will help me later for comment to assign avatar and user name
 
 			if (renderAvatars(data.users)) {
 				const div = document.createElement('div');
@@ -100,8 +103,8 @@ function renderComments(data, userName) {
 			comments += `<li class="${userName === element.name ? 'me' : 'you'}">
         <div class="entete">
           <span class="status green"></span>
-          <h2 id='${element.name}Comment' class="text-danger">${element.name}</h2>
-          <h3 id= "user1nowtime">${element.date}</h3>
+          <h2  class="text-danger">${element.name}</h2>
+          <h3 >${element.date}</h3>
         </div>
         <div class="triangle"></div>
         <div class="message" id="user1comment">
