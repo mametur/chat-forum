@@ -25,9 +25,10 @@ export const leaveComment = (event) => {
 	leaveNewComment(my_comment).then((data) => {
 		// render comments
 		if (renderComments(my_comment)) {
-			const divChat = document.createElement('div');
-			divChat.innerHTML = renderComments(my_comment);
-			chat_box.lastElementChild.lastElementChild.appendChild(divChat);
+			const liChat = document.createElement('li');
+			liChat.className = 'me';
+			liChat.innerHTML = renderComments(my_comment);
+			chat_box.firstElementChild.appendChild(liChat);
 		}
 	});
 };
@@ -57,7 +58,7 @@ async function leaveNewComment(comment) {
 // generate comments
 
 function renderComments(data) {
-	let comments = `<li class="'me'">
+	let comments = `
         <div class="entete">
           <span class="status green"></span>
           <h2  class="text-danger">${data.name}</h2>
@@ -67,7 +68,7 @@ function renderComments(data) {
         <div class="message" id="user1comment">
        ${data.comment}
         </div>
-      </li>`;
+      `;
 
 	return comments;
 }
