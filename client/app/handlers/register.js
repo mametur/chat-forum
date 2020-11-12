@@ -1,9 +1,9 @@
-var img1 = (new Image().src = './img/1.png');
-var img2 = (new Image().src = './img/2.png');
-var img3 = (new Image().src = './img/3.png');
-var img4 = (new Image().src = './img/4.png');
-var img5 = (new Image().src = './img/5.png');
-var img6 = (new Image().src = './img/6.png');
+var img1 = (new Image().src = '../img/1.png');
+var img2 = (new Image().src = '../img/2.png');
+var img3 = (new Image().src = '../img/3.png');
+var img4 = (new Image().src = '../img/4.png');
+var img5 = (new Image().src = '../img/5.png');
+var img6 = (new Image().src = '../img/6.png');
 
 export const setimage = (imageselect) => {
 	//	debugger;
@@ -26,6 +26,8 @@ export const register = async (e) => {
 		name: username,
 		password: password,
 		avatar: `${avatar}.png`,
+		active: false,
+		ID: false,
 	};
 
 	fetch('/api/users')
@@ -54,9 +56,10 @@ export const register = async (e) => {
 				})
 					.then((res) => {
 						if (res.ok) {
-							throw res;
+							alert(`${username.toUpperCase()}, welcome chat-forum.Please sign-in`);
+							window.location.reload();
+							return res.json();
 						}
-						return res.json();
 					})
 					.catch((err) => console.log(err));
 			}

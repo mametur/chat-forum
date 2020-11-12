@@ -1,6 +1,5 @@
 'use strict';
 
-const session = require('express-session');
 const util = require('util');
 const fs = require('fs');
 const path = require('path');
