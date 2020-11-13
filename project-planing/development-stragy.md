@@ -24,7 +24,7 @@ _A User can see the initial repository and live demo_
 - Push the changes to GitHub
 - Turn on GitHub Pages
 
-## 1. Edit Comment
+## Edit Comment
 
 **As a site visitor, I want be able to edit my comments.**
 
@@ -36,14 +36,19 @@ This user story has been developed through a branch called 'edit-comment'.
 
 - write editComment controller
 - Write backend handler
+- Add route
 
 ### Javascript
 
-- Add eventlistener
+- Add required event listeners
 
 ### HTML
 
 - Remove edit button
+
+### CSS
+
+- Add some styling
 
 ### JSON
 
