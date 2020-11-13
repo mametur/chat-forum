@@ -88,6 +88,24 @@ const controllers = {
 			next(error);
 		}
 	},
+
+	editComment: async (req, res) => {
+		const updatedComment = req.body;
+		try {
+			const usersComments = await readFile(DATA_PATH, 'utf-8');
+			const parsedData = await JSON.parse(usersComments);
+			const targetComment = parsedData.comments.find((comment) => {
+				return comment.name === updatedComment.name && comment.comment === updatedComment.comment;
+			})
+			targetComment.comment = updatedComment.editedComment;
+			targetComment.date = updatedComment.date;
+			const dataString = JSON.stringify(parsedData, null, ' ');
+			await writeFile(DATA_PATH, dataString);
+			res.send(targetComment);
+		} catch (err) {
+			console.error(err)
+		}
+	}
 };
 
 module.exports = controllers;
