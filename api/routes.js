@@ -9,5 +9,5 @@ router.get('/', controllers.hello);
 router.get('/users', controllers.readAll);
 router.post('/users', controllers.signUp);
 router.post('/comments', controllers.leaveComments);
-
+router.delete('/delete/:id', controllers.deleteComment)
 module.exports = router;
