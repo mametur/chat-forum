@@ -1,121 +1,65 @@
 {
- "users": [
-  {
-   "name": "Azad",
-   "password": "Azad123",
-   "comments": [],
-   "active": false,
-   "avatar": "3.png"
-  },
-  {
-   "name": "Alex",
-   "password": "Alex123",
-   "comments": [],
-   "active": false,
-   "avatar": "4.png"
-  },
-  {
-   "name": "Gelila",
-   "password": "Gelila123",
-   "comments": [],
-   "active": false,
-   "avatar": "6.png"
-  },
-  {
-   "name": "Eltayeb",
-   "password": "Eltayeb123",
-   "comments": [],
-   "active": false,
-   "avatar": "2.png"
-  },
-  {
-   "name": "Miroslav",
-   "password": "Miroslav123",
-   "comments": [],
-   "active": false,
-   "avatar": "2.png"
-  }
- ],
- "comments": [
-  {
-   "name": "Azad",
-   "comment": "Functional programming",
-   "date": "09/11/2020"
-  },
-  {
-   "name": "Azad",
-   "comment": "Prototypal inheritance",
-   "date": "12/11/2020"
-  },
-  {
-   "name": "Azad",
-   "comment": "Hello mesut\n",
-   "date": "2020-11-12 10:12:56"
-  },
-  {
-   "name": "Gelila",
-   "comment": "kdfkldl",
-   "date": "2020-11-12 10:13:19"
-  },
-  {
-   "name": "Gelila",
-   "comment": "sssss\n",
-   "date": "2020-11-12 10:13:29"
-  },
-  {
-   "name": "Azad",
-   "comment": "eeee",
-   "date": "2020-11-12 10:14:10"
-  },
-  {
-   "name": "Gelila",
-   "comment": "zzzz",
-   "date": "2020-11-12 10:17:20"
-  },
-  {
-   "name": "Gelila",
-   "comment": "sssss",
-   "date": "2020-11-12 10:21:0"
-  },
-  {
-   "name": "Azad",
-   "comment": "aaaa",
-   "date": "2020-11-12 10:22:16"
-  },
-  {
-   "name": "Azad",
-   "comment": "hey",
-   "date": "2020-11-12 10:23:3"
-  },
-  {
-   "name": "Gelila",
-   "comment": "zzzz\n",
-   "date": "2020-11-12 10:23:25"
-  },
-  {
-   "name": "Gelila",
-   "comment": "mesut\n",
-   "date": "2020-11-12 10:23:44"
-  },
-  {
-   "name": "Azad",
-   "comment": "zzzzz",
-   "date": "2020-11-12 10:24:7"
-  },
-  {
-   "name": "Azad",
-   "comment": "Hey I am here\n",
-   "date": "2020-11-12 16:52:4"
-  },
-  {
-   "name": "Azad",
-   "comment": "Call me baby",
-   "date": "2020-11-12 16:54:6"
-  },
-  {
-   "name": "Eltayeb",
-   "comment": "i learn coding in HYF",
-   "date": "2020-11-13 13:19:24"
-  }
- ]
+  "users": [
+    {
+      "name": "Azad",
+      "password": "Azad123",
+      "comments": [],
+      "active": false,
+      "avatar": "3.png"
+    },
+    {
+      "name": "Alex",
+      "password": "Alex123",
+      "comments": [],
+      "active": false,
+      "avatar": "4.png"
+    },
+    {
+      "name": "Gelila",
+      "password": "Gelila123",
+      "comments": [],
+      "active": false,
+      "avatar": "6.png"
+    },
+    {
+      "name": "Eltayeb",
+      "password": "Eltayeb123",
+      "comments": [],
+      "active": false,
+      "avatar": "2.png"
+    },
+    {
+      "name": "Miroslav",
+      "password": "Miroslav123",
+      "comments": [],
+      "active": false,
+      "avatar": "2.png"
+    }
+  ],
+  "comments": [
+    {
+      "name": "Azad",
+      "comment": "Functional programming",
+      "date": "09/11/2020",
+      "id": "1"
+    },
+    {
+      "name": "Miroslav",
+      "comment": "Edit the text",
+      "date": "2020-11-13 15:2:57",
+      "id": "5d31a881-2921-4478-aedf-3d602d2685f8"
+    },
+    {
+      "name": "Miroslav",
+      "comment": "Maybe",
+      "date": "2020-11-12 17:32:17",
+      "id": "bda9f561-5621-42ec-9054-84c10b84dd23"
+    },
+    {
+      "name": "Miroslav",
+      "comment": "Testing id",
+      "date": "2020-11-13 12:10:25",
+      "id": "d72400c2-9dea-44fe-8160-5fb0a90968ae"
+    }
+  ]
 }

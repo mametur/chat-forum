@@ -73,7 +73,7 @@ const controllers = {
 
 	leaveComments: async (req, res, next) => {
 		const newComment = req.body;
-
+	
 		try {
 			const readData = await readFile(DATA_PATH, 'utf-8');
 			const parseRead = JSON.parse(readData);
@@ -86,6 +86,38 @@ const controllers = {
 			res.json(parseRead);
 		} catch (error) {
 			next(error);
+		}
+	},
+
+	deleteComment: async (req, res, next) => {
+		const deleteUserComment = req.params.id;
+		
+		try {
+			const readData = await readFile(DATA_PATH, 'utf-8');
+			const parseRead = JSON.parse(readData);
+
+			const commentToDelete = parseRead.comments.find(comment => comment.id === deleteUserComment);
+
+		if (commentToDelete) {
+			parseRead.comments = parseRead.comments.filter(comment => comment.id !== commentToDelete.id);
+	
+			const newComments = JSON.stringify(parseRead, null, '  ');
+	
+			await writeFile(DATA_PATH, newComments);
+
+			res.json(parseRead);
+		} else {
+
+			res.json(`no entry with id ${deleteUserComment} to delete`);
+		  }
+	  }
+		 catch (err) {
+			console.log(err);
+
+			if (err && err.code === 'ENOENT') {
+				res.status(404).end();
+				return;
+			}
 		}
 	},
 
