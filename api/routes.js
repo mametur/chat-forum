@@ -10,4 +10,6 @@ router.get('/users', controllers.readAll);
 router.post('/users', controllers.signUp);
 router.post('/comments', controllers.leaveComments);
 router.delete('/delete/:id', controllers.deleteComment)
+router.put('/comment/edit', controllers.editComment);
+
 module.exports = router;

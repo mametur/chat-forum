@@ -78,11 +78,10 @@ function renderComments(data) {
         </div>
         <div class="triangle"></div>
         <div class="message" id="user1comment">
-       ${data.comment}
+		<input type="text" class="text-box" value="${data.comment}" readonly>
 		</div>
 		<div>
 		<button class="btns"><i class="far fa-trash-alt"></i></button>
-		<button class="btns" ><i class="fas fa-edit"></i></button>
 	  </div>
       `;
 

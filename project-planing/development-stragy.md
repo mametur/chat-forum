@@ -23,3 +23,33 @@ _A User can see the initial repository and live demo_
 - Prepare a project board
 - Push the changes to GitHub
 - Turn on GitHub Pages
+
+## Edit Comment
+
+**As a site visitor, I want be able to edit my comments.**
+
+This user story has been developed through a branch called 'edit-comment'.
+
+> Assign to **Eltayeb**
+
+### Node.js
+
+- write editComment controller
+- Write backend handler
+- Add route
+
+### Javascript
+
+- Add required event listeners
+
+### HTML
+
+- Remove edit button
+
+### CSS
+
+- Add some styling
+
+### JSON
+
+- Do some testing on json data file.
