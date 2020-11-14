@@ -53,3 +53,18 @@ This user story has been developed through a branch called 'edit-comment'.
 ### JSON
 
 - Do some testing on json data file.
+
+## 5. Delete Message from UI
+
+**As a site visitor, I want to able to delete any of my messages posted to the chat .**
+
+This user story has been developed through a branch called 'deleteMessageUI'.
+
+> Assign to **Alex**
+
+### JavaScript 
+
+- Create a deleteMessageUI handler
+- Add an eventListener to the 'delete' button
+- Use the unique ID in order to be able to delete a particular message from UI
+
