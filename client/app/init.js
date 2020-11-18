@@ -3,6 +3,7 @@ import { setimage } from './handlers/register.js';
 import { signIn } from './handlers/signIn.js';
 import { leaveComment } from './handlers/leave_comment.js';
 import { editCommentOnDC, editCommentOnBlur, editCommentOnfocus } from './handlers/edit-comment.js';
+import { deleteMessageUI } from './handlers/deleteMessageUI.js'
 
 document.getElementById('my-select').addEventListener('onchange', setimage);
 document.getElementById('signup').addEventListener('click', register);
@@ -23,3 +24,6 @@ document.querySelector('#chat').addEventListener('focusout', editCommentOnBlur);
 
 //edit comment on focus
 document.querySelector('#chat').addEventListener('focusin', editCommentOnfocus);
+
+/* Delete the message from UI */
+document.getElementById('chat').addEventListener('click', deleteMessageUI);

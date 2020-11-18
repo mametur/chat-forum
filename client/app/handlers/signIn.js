@@ -51,7 +51,7 @@ async function getUserInfo() {
 		const response = await fetch('/api/users');
 		//if something wrong
 		if (!response.ok) {
-			const message = `An error has accured: ${response.status}`;
+			const message = `An error has occurred: ${response.status}`;
 			throw new error(message);
 		}
 		const usersInfo = await response.json();
@@ -111,7 +111,7 @@ function renderComments(data, userName) {
 		<input type="text" class="text-box" value="${element.comment}" readonly>
 		</div>
 		<div>
-		<button class="btns"><i class="far fa-trash-alt"></i></button>
+		<button class="btns" data-remove="${element.id}"><i class="far fa-trash-alt" data-remove="${element.id}"></i></button>
 	  </div>
       </li>`;
 		});

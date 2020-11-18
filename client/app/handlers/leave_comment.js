@@ -81,7 +81,7 @@ function renderComments(data) {
 		<input type="text" class="text-box" value="${data.comment}" readonly>
 		</div>
 		<div>
-		<button class="btns"><i class="far fa-trash-alt"></i></button>
+		<button class="btns" data-remove="${data.id}"><i class="far fa-trash-alt" data-remove="${data.id}"></i></button>
 	  </div>
       `;
 
